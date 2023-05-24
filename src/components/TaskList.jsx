@@ -14,9 +14,11 @@ function TaskList() {
     );
   }
   return (
-    <div className="grid grid-cols-4 gap-2">
-      {tasks.map((task, i) => (
-        <TaskCard key={task.id} task={task} />
+    <div className="flex w-full justify-center flex-wrap">
+      {tasks.map((task) => (
+        <div key={task.id} className="mx-6 my-6">
+          <TaskCard task={task} />
+        </div>
       ))}
     </div>
   );
